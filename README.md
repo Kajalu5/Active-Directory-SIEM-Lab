@@ -1,6 +1,8 @@
 <h2> Description </h2>
 <h2> Installing Operating Systems </h2>
 <h3> Windows 10 Installation </h3>
+<img src = "image/1.png" height = 400, width = 500>
+
 <h3> Windows Server Installation </h3>
 <h3> Ubuntu Server 22.04 Installation </h3>
 <h3> Kali Linux Installation </h3>
