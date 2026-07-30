@@ -47,7 +47,7 @@ After that, choose Driver Unallocated 0 option. And after that download create p
 <img src = "image/25.png" height = 300, width = 600>
 
 <h3> Ubuntu Server 22.04 Installation </h3>
-To install Ubuntu 22.04.3 server, use this link: <a href="https://mirror.cherryservers.com/ubuntu-releases/releases/releases/22.04.3/">
+To install Ubuntu 22.04.3 server, use this link:https://mirror.cherryservers.com/ubuntu-releases/releases/releases/22.04.3/
 After downloading the ubuntu server, create a space in virtual box.
 <img src = "image/26.png" height = 300, width = 600>
 Mount the downloaded iso file and choose base memory as 8192 and number of CPUs as 2. Choose Hard Disk File Location and Size as 100 GB and then create the virtual machine.
