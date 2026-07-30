@@ -130,6 +130,63 @@ After that we access the splunk on the web using the address: http://192.168.10.
 <img src = "image/71.png" height = 300, width = 600>
 
 <h3> Splunk Forwarder and Sysmon on Windows 10 </h3>
+Before installing Splunk forwarder and Sysmon we must configure the network of our windows 10.The first step is to rename the PC to target-PC. After renaming the PC, we have restart the windows 10.
+<img src = "image/72.png" height = 300, width = 600>
+Then we check the IP address of the machine using the command: ipconfig in command prompt.
+<img src = "image/74.png" height = 300, width = 600>
+After that, we should go the setting and choose Network and Internet. Then after we choose the option change adapter options.
+<img src = "image/76.png" height = 300, width = 600>
+After that select ethernet properties by right clicking on the Ethernet option.
+<img src = "image/77.png" height = 300, width = 600>
+Then we choose the Internet protocol Version 4 (TCP/IPv4) option and chose the option using following address option. Then we set network settings in following way:
+IP address: 192.168.10.100
+Subnet mask: 255.255.255.0
+Default Gateway: 192.168.10.1
+Preferred DNS Server: 8.8.8.8
+<img src = "image/78.png" height = 300, width = 600>
+<img src = "image/79.png" height = 300, width = 600>
+And then we make sure the changes are applied using the command: ipconfig and the changes are reflected.
+<img src = "image/80.png" height = 300, width = 600>
+To install the Splunk forwarder, we sign in into Splunk official website and download forwarder compatible with windows 10 64 bit machine.
+<img src = "image/81.png" height = 300, width = 600>
+Then we install the Splunk forwarder and start configuring it. Choose an on premise Splunk Enterprise Instance.
+<img src = "image/83.png" height = 300, width = 600>
+Here the username is: admin. The hostname IP is ubuntu server's IP i.e. 192.168.10.10. And the port number is 9997
+<img src = "image/84.png" height = 300, width = 600>
+<img src = "image/86.png" height = 300, width = 600>
+Finally, we install the Splunk Forwarder.
+<img src = "image/87.png" height = 300, width = 600>
+<img src = "image/88.png" height = 300, width = 600>
+Now we have change the configuration of Sysmon. Navigate to the location:
+C:\Program Files\SplunkUniversalForwarder\etc\system\local
+<img src = "image/91.png" height = 300, width = 600>
+After that, visit this site: https://github.com/MyDFIR/Active-Directory-Project.
+<img src = "image/93.png" height = 300, width = 600>
+Then open the notepad as administrator, copy the content of Splunk Inputs.conf. and save the file as inputs.conf
+<img src = "image/92.png" height = 300, width = 600>
+<img src = "image/94.png" height = 300, width = 600>
+Then in PC, go to the services and right click on 'Local System Account'. After that, restart the SplunkForwarder service.
+<img src = "image/95.png" height = 300, width = 600>
+<img src = "image1/96.png" height = 300, width = 600>
+To install Sysmon visit official site of Microsoft and download the file.
+<img src = "image1/99.png" height = 300, width = 600>
+Then open the windows PowerShell as an administrator and use the command:
+cd C:\Users\kajal\Downloads\Sysmon
+.\Sysmon64.exe ..\sysmonconfig.xml
+This command will install the Sysmon
+<img src = "image1/100.png" height = 300, width = 600>
+<img src = "image1/101.png" height = 300, width = 600>
+
+Note: Make sure Splunk Forwarder and Sysmon64 services are running.
+Navigate to the Splunk and choose Indexes option. Then, name index as endpoint.
+<img src = "image1/102.png" height = 300, width = 600>
+<img src = "image1/103.png" height = 300, width = 600>
+Then go to the Forwarding and receiving option and click configure receiving. And then configure listening port as 9997.
+<img src = "image1/104.png" height = 300, width = 600>
+<img src = "image1/105.png" height = 300, width = 600>
+<img src = "image1/106.png" height = 300, width = 600>
+And make sure the endpoint is logged into Splunk
+
 <h3> Splunk Forwarder and Sysmon on Windows Server </h3>
 <h2> Configuring Active Directory </h2>
 <h3> Installing and Promoting Active Directory to Domain Controller </h3>
