@@ -188,6 +188,9 @@ Then go to the Forwarding and receiving option and click configure receiving. An
 And make sure the endpoint is logged into Splunk
 
 <h3> Splunk Forwarder and Sysmon on Windows Server </h3>
+Followed the same process as in Windows 10.
+<img src = "image1/108.png" height = 300, width = 600>
+
 <h2> Configuring Active Directory </h2>
 <h3> Installing and Promoting Active Directory to Domain Controller </h3>
 <h3> Creating Users </h3>
